@@ -26,7 +26,13 @@
 				<key>Signature</key>
 				<string>SSDT</string>
 				<key>TableId</key>
-				<string>CpuPm</string>
+				<string>Cpu0Cst</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>ApIst</string>
 			</dict>
 			<dict>
 				<key>Signature</key>
@@ -38,23 +44,17 @@
 				<key>Signature</key>
 				<string>SSDT</string>
 				<key>TableId</key>
-				<string>ApIst</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Cst</string>
+				<string>CpuPm</string>
 			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>SSDT</string>
 				<key>TableId</key>
 				<string>ApCst</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
 			</dict>
 		</array>
 		<key>SSDT</key>
@@ -73,6 +73,8 @@
 		<string>dart=0 nv_disable=1 kext-dev-mode=1</string>
 		<key>Debug</key>
 		<false/>
+		<key>DefaultVolume</key>
+		<string>OSX</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>NeverHibernate</key>
@@ -124,10 +126,14 @@
 		</dict>
 		<key>Mouse</key>
 		<dict>
+			<key>DoubleClick</key>
+			<integer>500</integer>
 			<key>Enabled</key>
 			<false/>
 			<key>Mirror</key>
 			<false/>
+			<key>Speed</key>
+			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
 		<dict>
@@ -181,30 +187,44 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio HD4000 0x01660003, port 0304</string>
+				<string>10.10-BCM94352-Airport-Extreme</string>
 				<key>Find</key>
 				<data>
-				AwQAAAAEAACBAAAA
+				axAAAHUN
 				</data>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>
-				AwQAAAAIAAAGAAAA
+				axAAAJCQ
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio HD4000 0x01660003, port 0406</string>
+				<string>10.10-BCM94352-5 GHz-US-FCC</string>
 				<key>Find</key>
 				<data>
-				BAYAAAAEAACBAAAA
+				WFQAKxgsIQAg
 				</data>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>
-				BAYAAAAIAAAGAAAA
+				VVMICjYcRwAK
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.10-BCM94352-Whitelest-0x4353-MacBoolAir5,2</string>
+				<key>Find</key>
+				<data>
+				TWFjLUM2RUZBNjM5NjJGQzZFQTA=
+				</data>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>
+				TWFjLTI3QURCQjdCNENFRThFNjE=
 				</data>
 			</dict>
 			<dict>
@@ -223,16 +243,44 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
+				<string>HDMI-audio HD4000 0x01660003, port 0406</string>
 				<key>Find</key>
 				<data>
-				AgUAAAAEAAAHBAAA
+				BAYAAAAEAACBAAAA
 				</data>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
 				<data>
-				AgUAAAAIAAAGAAAA
+				BAYAAAAIAAAGAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Second Stage Patch 1</string>
+				<key>Find</key>
+				<data>
+				hcB0XUg=
+				</data>
+				<key>Name</key>
+				<string>disabled:IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				McB0W0g=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.10-BT4LE-Handoff-Hotspot</string>
+				<key>Find</key>
+				<data>
+				i4eMAQAA
+				</data>
+				<key>Name</key>
+				<string>IOBluetoothFamily</string>
+				<key>Replace</key>
+				<data>
+				uA8AAACQ
 				</data>
 			</dict>
 			<dict>
@@ -251,16 +299,30 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Second Stage Patch 1</string>
+				<string>HDMI-audio HD4000 0x01660003, port 0304</string>
 				<key>Find</key>
 				<data>
-				hcB0XUg=
+				AwQAAAAEAACBAAAA
 				</data>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
 				<data>
-				McB0W0g=
+				AwQAAAAIAAAGAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
+				<key>Find</key>
+				<data>
+				AgUAAAAEAAAHBAAA
+				</data>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Replace</key>
+				<data>
+				AgUAAAAIAAAGAAAA
 				</data>
 			</dict>
 		</array>
